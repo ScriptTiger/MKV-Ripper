@@ -10,6 +10,8 @@ If you're having issues and find the codecs you're using are not currently suppo
 **Download the full pre-bundled self-extracting package here:**  
 https://github.com/ScriptTiger/MKV-Ripper/releases/latest
 
+# More About ScriptTiger
+
 For more ScriptTiger scripts and goodies, check out ScriptTiger's GitHub Pages website:  
 https://scripttiger.github.io/
 
