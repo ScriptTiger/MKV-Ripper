@@ -12,6 +12,9 @@ setlocal ENABLEDELAYEDEXPANSION
 rem Generic call to FFmpeg
 set FFMPEG=call "%~dp0bin\ffmpeg.exe" -hide_banner -i %1
 
+rem Base file name
+set BASE=%~dpn1
+
 rem Enumerate video and audio streams, and generate associated output arguments
 set OUTPUT=
 set i=0
@@ -47,5 +50,5 @@ if "!EXT!" == "" (
 	echo The %2 %1 codec is currently unsupported. Please submit a PR or issue on GitHub to request support to be added.
 	exit /b
 )
-set OUTPUT=!OUTPUT! "%~dpn1-!i!.!EXT!"
+set OUTPUT=!OUTPUT! "%BASE%-!i!.!EXT!"
 exit /b
