@@ -40,6 +40,10 @@ exit /b
 rem Generate output arguments
 :Output
 set EXT=
+if "%1" neq "Video" if "%1" neq "Audio" (
+	set EXT=null
+	exit /b
+)
 if "%1" == "Video" set OUTPUT=!OUTPUT! -map 0:!i! -c:v copy -an -dn -sn 
 if "%1" == "Audio" set OUTPUT=!OUTPUT! -map 0:!i! -c:a copy -vn -dn -sn 
 if "%2" == "h264" set EXT=mp4
