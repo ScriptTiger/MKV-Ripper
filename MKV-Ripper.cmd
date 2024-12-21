@@ -50,6 +50,7 @@ if "%2" == "h264" set EXT=mp4
 if "%2" == "hevc" set EXT=mp4
 if "%2" == "pcm" set EXT=wav
 if "%2" == "aac" set EXT=m4a
+if "%2" == "flac" set EXT=flac
 if "!EXT!" == "" (
 	echo The %2 %1 codec is currently unsupported. Please submit a PR or issue on GitHub to request support to be added.
 	exit /b
