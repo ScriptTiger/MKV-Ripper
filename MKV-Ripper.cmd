@@ -48,6 +48,7 @@ if "%1" == "Video" set OUTPUT=!OUTPUT! -map 0:!i! -c:v copy -an -dn -sn
 if "%1" == "Audio" set OUTPUT=!OUTPUT! -map 0:!i! -c:a copy -vn -dn -sn 
 if "%2" == "h264" set EXT=mp4
 if "%2" == "hevc" set EXT=mp4
+if "%2" == "av1" set EXT=mp4
 if "%2" == "pcm" set EXT=wav
 if "%2" == "aac" set EXT=m4a
 if "%2" == "flac" set EXT=flac
