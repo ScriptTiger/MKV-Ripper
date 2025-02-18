@@ -20,6 +20,7 @@ set OUTPUT=
 set i=0
 for /f tokens^=4^,5^,6^ delims^=^:^,^_^(^)^  %%0 in ('%FFMPEG% -vn -an -dn -sn -f null "" 2^>^&1^| findstr Stream') do (
 	if "%%0" == "und" (call :Output %%1 %%2
+	) else if "%%0" == "eng" (call :Output %%1 %%2
 	) else call :Output %%0 %%1
 	if "!EXT!" == "" goto Exit
 	set /a i=i+1
